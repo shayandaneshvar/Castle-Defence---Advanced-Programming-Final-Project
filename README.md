@@ -2,6 +2,9 @@
 
 [![Grader Status](https://kntu-grader.herokuapp.com/minimal?repo=hw5-fariborz-endgame-shayandaneshvar&id=9726523)](https://kntu-grader.herokuapp.com/minimal?repo=hw5-fariborz-endgame-shayandaneshvar&id=9726523)
 
+# Introduction Video
+
+https://www.youtube.com/embed/Mcli1taB2tI
 
 # Assignment discription
 
