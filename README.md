@@ -1,6 +1,6 @@
 # HW 5 - Fariborz EndGame
 
-[![Grader Status](https://kntu-grader.herokuapp.com/minimal?repo=hw5-fariborz-endgame-shayandaneshvar&id=9726523)](https://kntu-grader.herokuapp.com/minimal?repo=hw5-fariborz-endgame-shayandaneshvar&id=9726523)
+This is a 2D based Game similar to Clash Royal Game - Which was the last project for Advanced Programming
 
 # Introduction Video
 
