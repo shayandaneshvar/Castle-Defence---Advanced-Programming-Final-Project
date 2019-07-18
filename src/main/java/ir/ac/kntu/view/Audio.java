@@ -110,7 +110,7 @@ public final class Audio {
         });
         Thread three = new Thread(() -> {
             playSound("three.wav");
-            while (System.currentTimeMillis() - start < 1400) {
+            while (System.currentTimeMillis() - start < 100) {
                 System.out.println("Counting 3");
             }
             two.start();

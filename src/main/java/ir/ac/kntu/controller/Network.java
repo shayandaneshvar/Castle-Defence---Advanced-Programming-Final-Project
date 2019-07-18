@@ -252,18 +252,7 @@ public final class Network {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Thread sender = new Thread(() -> {
-                    ObjectOutputStream oos = null;
-                    try {
-                        oos = new ObjectOutputStream(socket
-                                .getOutputStream());
-                        oos.writeObject(board);
-                        oos.flush();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                });
-                sender.start();
+                update();
             }
         };
         timer.scheduleAtFixedRate(task, 0, sendingDelay);
@@ -302,18 +291,7 @@ public final class Network {
             @Override
             public void run() {
                 if (/*update.get() || serverSocket != null*/true) {
-                    Thread sender = new Thread(() -> {
-                        ObjectOutputStream oos = null;
-                        try {
-                            oos = new ObjectOutputStream(socket
-                                    .getOutputStream());
-                            oos.writeObject(board);
-                            oos.flush();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    });
-                    sender.start();
+                    update();
                 }
             }
         };
@@ -338,5 +316,20 @@ public final class Network {
             }
         };
         timer1.scheduleAtFixedRate(task1, 0, receivingDelay);
+    }
+
+    private static void update() {
+        Thread sender = new Thread(() -> {
+            ObjectOutputStream oos = null;
+            try {
+                oos = new ObjectOutputStream(socket
+                        .getOutputStream());
+                oos.writeObject(board);
+                oos.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        sender.start();
     }
 }
